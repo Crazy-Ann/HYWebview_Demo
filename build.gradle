@@ -1,0 +1,54 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.2.2'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+
+ext {
+    minSdkVersion = 18
+    targetSdkVersion = 25
+    compileSdkVersion = 25
+    buildToolsVersion = "25.0.2"
+    sourceCompatibilityVersion = JavaVersion.VERSION_1_7
+    targetCompatibilityVersion = JavaVersion.VERSION_1_7
+}
+
+
+ext.deps = [
+        appcompat_v4        : 'com.android.support:support-v4:25.0.0',
+        appcompat_v7        : 'com.android.support:appcompat-v7:25.0.0',
+        design              : 'com.android.support:design:25.0.0',
+        junit               : 'junit:junit:4.12',
+        multidex            : 'com.android.support:multidex:1.0.1',
+        zxing               : 'com.google.zxing:core:3.3.0',
+        getui               : 'com.getui:sdk:2.9.5.0',
+        bugly               : 'com.tencent.bugly:crashreport:latest.release',
+        butterknife         : 'com.jakewharton:butterknife:8.5.1',
+        butterknife_compiler: 'com.jakewharton:butterknife-compiler:8.5.1',
+        crashreport         : 'com.tencent.bugly:crashreport:latest.release',
+        gson                : 'com.google.code.gson:gson:2.8.0',
+        glide               : 'com.github.bumptech.glide:glide:3.7.0',
+        guava               : 'com.google.guava:guava:20.0',
+        fastjson            : 'com.alibaba:fastjson:1.1.55.android',
+        okhttp3             : 'com.squareup.okhttp3:okhttp:3.4.2',
+        okio                : 'com.squareup.okio:okio:1.11.0'
+]
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

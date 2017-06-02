@@ -1,0 +1,3 @@
+<resources>
+    <string name="http_error_prompt1">请检查网络是否可用</string>
+</resources>
